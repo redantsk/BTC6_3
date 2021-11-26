@@ -42,11 +42,11 @@ def get_average(ticker):
 
 def get_current_price(ticker):
     """현재가 매도가 조회"""
-    return pyupbit.get_orderbook(tickers=ticker)[0]["orderbook_units"][0]["ask_price"]
+    return pyupbit.get_orderbook(ticker)["orderbook_units"][0]["ask_price"]
 
 def get_bid_price(ticker):
     """현재 매수가 조회"""
-    return pyupbit.get_orderbook(tickers=ticker)[0]["orderbook_units"][0]["bid_price"]
+    return pyupbit.get_orderbook(ticker)["orderbook_units"][0]["bid_price"]
 
 def cur_price(ticker):
     """현재 체결가 조회"""
